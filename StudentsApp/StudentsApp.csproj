@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86A0EB62-0961-4B02-986B-072C0F61AFA5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentsApp</RootNamespace>
+    <AssemblyName>StudentsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>KDUDesktop_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Extra Library\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Extra Library\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddUserFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AddUserFormAdmin.Designer.cs">
+      <DependentUpon>AddUserFormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BackupFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\BackupFormAdmin.Designer.cs">
+      <DependentUpon>BackupFormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SearchFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\SearchFormAdmin.Designer.cs">
+      <DependentUpon>SearchFormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendSheetForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendSheetForm1.Designer.cs">
+      <DependentUpon>AttendSheetForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupForm.Designer.cs">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlackBkForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlackBkForm1.Designer.cs">
+      <DependentUpon>BlackBkForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChrgSheetForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChrgSheetForm1.Designer.cs">
+      <DependentUpon>ChrgSheetForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBClass\Cadet.cs" />
+    <Compile Include="DBClass\ConnectionManager.cs" />
+    <Compile Include="DBClass\DBAccess.cs" />
+    <Compile Include="DBClass\Student.cs" />
+    <Compile Include="DBClass\User.cs" />
+    <Compile Include="FormImgViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImgViewer.Designer.cs">
+      <DependentUpon>FormImgViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InciDryForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InciDryForm1.Designer.cs">
+      <DependentUpon>InciDryForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor\AddCadetFormInst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor\AddCadetFormInst.Designer.cs">
+      <DependentUpon>AddCadetFormInst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor\AttendFormInstruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor\AttendFormInstruct.Designer.cs">
+      <DependentUpon>AttendFormInstruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor\PTTestFormInstruc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor\PTTestFormInstruc.Designer.cs">
+      <DependentUpon>PTTestFormInstruc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor\SearchFormIntruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor\SearchFormIntruct.Designer.cs">
+      <DependentUpon>SearchFormIntruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor\SickChrtFormInstruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor\SickChrtFormInstruct.Designer.cs">
+      <DependentUpon>SickChrtFormInstruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Officer_InstructForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Officer_InstructForm.Designer.cs">
+      <DependentUpon>Officer_InstructForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm1.Designer.cs">
+      <DependentUpon>SearchForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUpForm.Designer.cs">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkAssForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkAssForm1.Designer.cs">
+      <DependentUpon>WorkAssForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GdCondctForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GdCondctForm1.Designer.cs">
+      <DependentUpon>GdCondctForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForm.Designer.cs">
+      <DependentUpon>InstructorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficerForm.Designer.cs">
+      <DependentUpon>OfficerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PTTestForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTTestForm1.Designer.cs">
+      <DependentUpon>PTTestForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewCadet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewCadet.Designer.cs">
+      <DependentUpon>AddNewCadet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SickChrtForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SickChrtForm1.Designer.cs">
+      <DependentUpon>SickChrtForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AddUserFormAdmin.resx">
+      <DependentUpon>AddUserFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\BackupFormAdmin.resx">
+      <DependentUpon>BackupFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\SearchFormAdmin.resx">
+      <DependentUpon>SearchFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendSheetForm1.resx">
+      <DependentUpon>AttendSheetForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupForm.resx">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlackBkForm1.resx">
+      <DependentUpon>BlackBkForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChrgSheetForm1.resx">
+      <DependentUpon>ChrgSheetForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImgViewer.resx">
+      <DependentUpon>FormImgViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InciDryForm1.resx">
+      <DependentUpon>InciDryForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor\AddCadetFormInst.resx">
+      <DependentUpon>AddCadetFormInst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor\AttendFormInstruct.resx">
+      <DependentUpon>AttendFormInstruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor\PTTestFormInstruc.resx">
+      <DependentUpon>PTTestFormInstruc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor\SearchFormIntruct.resx">
+      <DependentUpon>SearchFormIntruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor\SickChrtFormInstruct.resx">
+      <DependentUpon>SickChrtFormInstruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Officer_InstructForm.resx">
+      <DependentUpon>Officer_InstructForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm1.resx">
+      <DependentUpon>SearchForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUpForm.resx">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkAssForm1.resx">
+      <DependentUpon>WorkAssForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GdCondctForm1.resx">
+      <DependentUpon>GdCondctForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForm.resx">
+      <DependentUpon>InstructorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficerForm.resx">
+      <DependentUpon>OfficerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTTestForm1.resx">
+      <DependentUpon>PTTestForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewCadet.resx">
+      <DependentUpon>AddNewCadet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SickChrtForm1.resx">
+      <DependentUpon>SickChrtForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Extra Library\itextsharp.dll" />
+    <Content Include="Extra Library\System.Drawing.dll" />
+    <Content Include="img\Administrator Male_50px.png" />
+    <Content Include="img\Calendar 1_50px.png" />
+    <Content Include="img\Cancel_50px.png" />
+    <Content Include="img\Check.png" />
+    <Content Include="img\Checklist_50px.png" />
+    <Content Include="img\Check_50px.png" />
+    <Content Include="img\Cherest-150x150.png" />
+    <Content Include="img\data-quality-professional-services-icon.png" />
+    <Content Include="img\FormatFactorybusiness-meeting-icon-buy-this-icon-for--0-99-1.png" />
+    <Content Include="img\FormatFactoryCherest-150x150~1.png" />
+    <Content Include="img\FormatFactorydatabase.png" />
+    <Content Include="img\FormatFactorydownload.png" />
+    <Content Include="img\FormatFactorymen-icon.png" />
+    <Content Include="img\FormatFactorypeople_crowd-512.png" />
+    <Content Include="img\FormatFactorytask-management-512.png" />
+    <Content Include="img\Home.png" />
+    <Content Include="img\Home_50px.png" />
+    <Content Include="img\Ingredients List_50px.png" />
+    <Content Include="img\KDUDesktop_icon.ico" />
+    <Content Include="img\Literature_50px.png" />
+    <Content Include="img\LoginBG.jpg" />
+    <Content Include="img\SplashScreen.gif" />
+    <Content Include="img\Tasklist_50px.png" />
+    <Content Include="img\Test Partial Passed_50px.png" />
+    <Content Include="KDUDesktop_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
